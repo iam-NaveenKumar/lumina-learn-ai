@@ -16,14 +16,18 @@ const Header = ({ username = "Naveen" }: HeaderProps) => {
           </div>
           
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="rounded-full relative text-primary">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="rounded-full relative text-primary hover:bg-primary/10 hover:scale-105 transition-all duration-200"
+            >
               <Bell className="h-5 w-5" />
               <span className="absolute -top-0.5 -right-0.5 bg-primary w-2.5 h-2.5 rounded-full"></span>
             </Button>
             
             <Button 
               variant="outline" 
-              className="flex items-center gap-2 rounded-full border-primary/20 hover:border-primary/50 text-primary"
+              className="flex items-center gap-2 rounded-full border-primary/20 hover:border-primary hover:bg-primary/5 hover:scale-105 transition-all duration-200 text-primary"
             >
               <span>My Profile</span>
               <User className="h-4 w-4" />

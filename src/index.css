@@ -64,4 +64,17 @@
   .button-hover {
     @apply transition-all duration-200 hover:shadow-soft hover:brightness-105;
   }
+  
+  .link-hover {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .scale-hover {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .pulse-hover {
+    @apply hover:animate-pulse-light;
+  }
 }
+
