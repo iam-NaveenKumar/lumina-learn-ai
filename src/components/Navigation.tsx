@@ -32,8 +32,8 @@ const Navigation = () => {
   ];
   
   return (
-    <nav className="fixed bottom-0 left-0 right-0 md:top-20 md:bottom-auto md:left-4 z-40 bg-white border-t md:bg-transparent md:border-none md:w-16">
-      <div className="flex justify-around md:flex-col md:space-y-4 py-2 px-4 md:py-4">
+    <nav className="fixed bottom-0 left-0 right-0 md:top-20 md:bottom-auto md:left-1/2 md:-translate-x-1/2 z-40 bg-white border-t md:bg-transparent md:border-none md:w-auto">
+      <div className="flex justify-around md:flex-row md:space-y-0 md:space-x-6 py-2 px-4 md:py-4">
         {navItems.map((item) => (
           <Link 
             key={item.path} 
