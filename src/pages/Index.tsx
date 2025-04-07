@@ -11,9 +11,9 @@ const Index = () => {
   }, [navigate]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center bg-white">
       <div className="text-center">
-        <h1 className="text-2xl font-bold mb-4">Redirecting to Home...</h1>
+        <h1 className="text-2xl font-bold mb-4 text-primary">Redirecting to Home...</h1>
       </div>
     </div>
   );
