@@ -118,7 +118,8 @@ export default {
 				'card': '0 8px 30px rgba(0, 0, 0, 0.08)'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif']
+				sans: ['Inter', 'sans-serif'],
+				'pt-sans': ['"PT Sans"', 'sans-serif']
 			}
 		}
 	},

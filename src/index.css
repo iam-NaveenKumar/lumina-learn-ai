@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=PT+Sans:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -63,5 +63,13 @@
   
   .button-hover {
     @apply transition-all duration-200 hover:shadow-soft hover:brightness-105;
+  }
+  
+  .nav-item {
+    @apply transition-all duration-200 hover:bg-primary/10 hover:scale-105;
+  }
+  
+  .header-button {
+    @apply transition-all duration-200 hover:bg-primary/20 hover:scale-105;
   }
 }
