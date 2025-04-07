@@ -32,17 +32,17 @@ const Navigation = () => {
   ];
   
   return (
-    <nav className="fixed bottom-0 left-0 right-0 md:top-20 md:bottom-auto md:left-4 z-40 bg-white border-t md:bg-transparent md:border-none md:w-16">
+    <nav className="fixed bottom-0 left-0 right-0 md:top-16 md:bottom-auto md:left-4 z-40 bg-white border-t md:bg-transparent md:border-none md:w-16">
       <div className="flex justify-around md:flex-col md:space-y-4 py-2 px-4 md:py-4">
         {navItems.map((item) => (
           <Link 
             key={item.path} 
             to={item.path} 
             className={cn(
-              "flex flex-col items-center justify-center p-2 rounded-lg transition-all md:w-12 md:h-12 hover:shadow-md",
+              "flex flex-col items-center justify-center p-2 rounded-lg transition-all md:w-12 md:h-12",
               activeRoute === item.path 
-                ? "text-primary bg-primary/10" 
-                : "text-gray-500 hover:text-primary hover:bg-primary/5 hover:scale-105 transition-transform duration-200"
+                ? "text-primary" 
+                : "text-gray-500 hover:text-primary hover:bg-primary/5"
             )}
           >
             <item.icon className="w-5 h-5 md:w-6 md:h-6" />
