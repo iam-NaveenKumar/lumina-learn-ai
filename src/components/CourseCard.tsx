@@ -26,22 +26,22 @@ const CourseCard = ({
   type = "global"
 }: CourseCardProps) => {
   return (
-    <Card className="overflow-hidden card-hover">
+    <Card className="overflow-hidden card-hover border-primary/10 transition-all duration-300 group animate-scale">
       <div className="h-40 overflow-hidden relative">
         <img 
           src={image} 
           alt={title}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
         {type === "local" && (
-          <Badge className="absolute top-2 right-2 bg-primary">Local</Badge>
+          <Badge className="absolute top-2 right-2 bg-primary hover-glow">Local</Badge>
         )}
       </div>
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
-          <CardTitle className="text-lg line-clamp-1">{title}</CardTitle>
+          <CardTitle className="text-lg line-clamp-1 group-hover:text-primary transition-colors">{title}</CardTitle>
           {tags.length > 0 && (
-            <Badge variant="outline" className="text-xs">{tags[0]}</Badge>
+            <Badge variant="outline" className="text-xs transition-all duration-300 hover:bg-primary hover:text-white">{tags[0]}</Badge>
           )}
         </div>
         <CardDescription className="line-clamp-2">{description}</CardDescription>
@@ -50,19 +50,19 @@ const CourseCard = ({
         <div className="space-y-2">
           <div className="flex justify-between text-sm">
             <span>Progress</span>
-            <span>{progress}%</span>
+            <span className="font-medium text-primary">{progress}%</span>
           </div>
-          <Progress value={progress} className="h-2" />
+          <Progress value={progress} className="h-2 bg-gray-100" />
         </div>
       </CardContent>
       <CardFooter className="pt-0 text-xs text-muted-foreground">
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center">
-            <Clock className="w-3 h-3 mr-1" />
+            <Clock className="w-3 h-3 mr-1 text-primary" />
             <span>{duration}</span>
           </div>
           <div className="flex items-center">
-            <BookOpen className="w-3 h-3 mr-1" />
+            <BookOpen className="w-3 h-3 mr-1 text-primary" />
             <span>{lessons} lessons</span>
           </div>
         </div>
