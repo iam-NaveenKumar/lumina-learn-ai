@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
 import ChatbotButton from "./components/ChatbotButton";
 import SplashScreen from "./components/SplashScreen";
+import Header from "./components/Header";
 
 const queryClient = new QueryClient();
 
@@ -42,15 +43,20 @@ const AppContent = () => {
 
   return (
     <div className="relative min-h-screen">
-      <PageTransition>
-        <Routes location={location}>
-          <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/learning" element={<Learning />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </PageTransition>
-      <Navigation />
+      <Header />
+      <div className="flex">
+        <Navigation />
+        <div className="ml-16 w-full">
+          <PageTransition>
+            <Routes location={location}>
+              <Route path="/" element={<Home />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/learning" element={<Learning />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </PageTransition>
+        </div>
+      </div>
       <ChatbotButton />
     </div>
   );
