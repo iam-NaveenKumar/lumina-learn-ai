@@ -1,6 +1,4 @@
-
 import { BookOpen, Clock, BarChart2, Award } from "lucide-react";
-import Header from "@/components/Header";
 import StatCard from "@/components/StatCard";
 
 const Dashboard = () => {
@@ -34,8 +32,6 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header username="Alex" />
-      
       <main className="container px-4 py-6 md:px-6 max-w-7xl mx-auto pb-20 md:pb-6">
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Your Learning Stats</h2>

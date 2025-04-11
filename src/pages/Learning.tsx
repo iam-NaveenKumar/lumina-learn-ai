@@ -1,6 +1,4 @@
-
 import { useState } from "react";
-import Header from "@/components/Header";
 import CourseCard from "@/components/CourseCard";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -39,7 +37,7 @@ const Learning = () => {
       progress: 18,
       duration: "10 hours",
       lessons: 32,
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2a5aee158?w=800&auto=format&fit=crop",
       tags: ["React"],
       type: "local"
     },
@@ -63,8 +61,6 @@ const Learning = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header username="Alex" />
-      
       <main className="container px-4 py-6 md:px-6 max-w-7xl mx-auto pb-20 md:pb-6">
         <section className="mb-8">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6 gap-4">
