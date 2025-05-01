@@ -1,7 +1,5 @@
-
 import { useState } from "react";
 import NewsCard from "@/components/NewsCard";
-import { Button } from "@/components/ui/button";
 
 const Home = () => {
   const [username, setUsername] = useState("User");
@@ -39,14 +37,12 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="min-h-screen bg-gray-50">
       <main className="container px-4 py-6 md:px-6 max-w-7xl mx-auto pb-20 md:pb-6">
-        <section className="mb-10">
+        <section className="mb-8">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-3xl font-semibold text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-light to-primary">Latest Tech News</h2>
-            <Button className="rounded-full bg-gradient-to-r from-primary to-primary-light hover:shadow-glow transition-all">
-              View All
-            </Button>
+            <h2 className="text-2xl font-semibold text-gray-800">Latest Tech News</h2>
+            <button className="text-primary hover:text-primary-dark text-sm font-medium">View All</button>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -64,44 +60,42 @@ const Home = () => {
         
         <section>
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-3xl font-semibold text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-light to-primary">Recommended for You</h2>
-            <Button className="rounded-full bg-gradient-to-r from-primary to-primary-light hover:shadow-glow transition-all">
-              View All
-            </Button>
+            <h2 className="text-2xl font-semibold text-gray-800">Recommended for You</h2>
+            <button className="text-primary hover:text-primary-dark text-sm font-medium">View All</button>
           </div>
           
-          <div className="bg-white rounded-xl shadow-md p-6 border border-primary/10 hover:shadow-card transition-all">
+          <div className="bg-white rounded-xl shadow-soft p-6 border">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-              <div className="w-full md:w-1/3 rounded-lg overflow-hidden shadow-md">
+              <div className="w-full md:w-1/3 rounded-lg overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop"
                   alt="Recommended learning"
-                  className="w-full h-48 md:h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-48 md:h-full object-cover"
                 />
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl font-semibold mb-3 text-primary">Get Started with AI in 2025</h3>
-                <p className="text-gray-600 mb-5 leading-relaxed">
+                <h3 className="text-xl font-semibold mb-2">Get Started with AI in 2025</h3>
+                <p className="text-gray-600 mb-4">
                   Learn the fundamentals of artificial intelligence with our curated path. Start with basics 
                   and progress to advanced machine learning concepts with hands-on projects.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div className="bg-gradient-to-br from-white to-gray-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-all">
-                    <p className="text-sm text-primary-light">Difficulty</p>
-                    <p className="font-medium text-primary">Beginner-Friendly</p>
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <p className="text-sm text-gray-500">Difficulty</p>
+                    <p className="font-medium">Beginner-Friendly</p>
                   </div>
-                  <div className="bg-gradient-to-br from-white to-gray-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-all">
-                    <p className="text-sm text-primary-light">Duration</p>
-                    <p className="font-medium text-primary">8 Weeks</p>
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <p className="text-sm text-gray-500">Duration</p>
+                    <p className="font-medium">8 Weeks</p>
                   </div>
-                  <div className="bg-gradient-to-br from-white to-gray-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-all">
-                    <p className="text-sm text-primary-light">Projects</p>
-                    <p className="font-medium text-primary">4 Hands-on</p>
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <p className="text-sm text-gray-500">Projects</p>
+                    <p className="font-medium">4 Hands-on</p>
                   </div>
                 </div>
-                <Button className="bg-gradient-to-r from-primary to-primary-light text-white px-8 py-2 rounded-lg hover:shadow-glow transition-all button-hover">
+                <button className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-light transition-colors button-hover">
                   Start Learning
-                </Button>
+                </button>
               </div>
             </div>
           </div>
