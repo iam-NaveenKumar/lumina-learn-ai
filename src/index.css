@@ -94,7 +94,7 @@
   
   /* Glassmorphism */
   .glass {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl;
+    @apply bg-white/20 backdrop-blur-lg border border-white/20 rounded-xl;
   }
   
   .neumorphism {
@@ -104,6 +104,11 @@
   /* Gradient text */
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-light to-primary;
+  }
+
+  /* Card styling */
+  .card-enhanced {
+    @apply rounded-xl overflow-hidden border-none shadow-md hover:shadow-xl transition-all;
   }
 }
 
@@ -146,6 +151,24 @@
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
 /* Animation Classes */
 .animate-fade-in {
   animation: fadeIn 0.5s ease forwards;
@@ -163,6 +186,16 @@
   animation: pulse 2s infinite;
 }
 
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
 /* Staggered animations for lists */
 .stagger-item:nth-child(1) { animation-delay: 0.1s; }
 .stagger-item:nth-child(2) { animation-delay: 0.2s; }
@@ -178,4 +211,14 @@
 .hover-gradient:hover {
   background: linear-gradient(135deg, #794CA2 0%, #9A6FBF 100%);
   color: white;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
 }

@@ -15,26 +15,26 @@ const SplashScreen = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-primary overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-primary to-primary-light overflow-hidden">
       <div className="flex flex-col items-center">
         <div className="mb-8 relative">
-          <div className="absolute inset-0 bg-white/20 rounded-full animate-pulse-light" style={{ transform: 'scale(1.2)' }}></div>
-          <div className="h-28 w-28 rounded-full bg-white flex items-center justify-center shadow-glow">
+          <div className="absolute inset-0 bg-white/30 rounded-full animate-pulse-light" style={{ transform: 'scale(1.3)' }}></div>
+          <div className="h-32 w-32 rounded-full bg-white/90 flex items-center justify-center shadow-glow">
             <img 
               src="/lovable-uploads/acb6546b-be9b-49e7-987b-25063224688a.png" 
               alt="AI Tutor Logo"
-              className="h-20 w-20 object-contain"
+              className="h-24 w-24 object-contain animate-pulse-soft"
             />
           </div>
         </div>
-        <h1 className="text-3xl font-bold text-white mb-2 animate-fade-in font-poppins">AI Tutor</h1>
-        <p className="text-white/80 animate-slide-in-up">Welcome to TechLearn</p>
+        <h1 className="text-4xl font-bold text-white mb-2 animate-fade-in font-poppins tracking-wider">AI Tutor</h1>
+        <p className="text-white/90 animate-slide-in-up text-lg font-light">Welcome to TechLearn</p>
         
-        <div className="mt-8 flex space-x-2">
+        <div className="mt-10 flex space-x-3">
           {[0, 1, 2].map((i) => (
             <div 
               key={i}
-              className="h-2 w-2 bg-white rounded-full"
+              className="h-3 w-3 bg-white rounded-full"
               style={{ animation: `pulse 1s ${i * 0.3}s infinite` }}
             ></div>
           ))}

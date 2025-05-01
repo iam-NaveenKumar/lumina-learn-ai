@@ -32,22 +32,25 @@ const Navigation = () => {
   ];
   
   return (
-    <nav className="fixed left-0 top-16 bottom-0 z-40 w-16 bg-white/80 backdrop-blur-sm border-r border-primary/10 shadow-sm">
+    <nav className="fixed left-0 top-16 bottom-0 z-40 w-16 glass backdrop-blur-md border-r border-primary/10 shadow-md">
       <div className="flex flex-col items-center justify-center h-full">
-        <div className="flex flex-col space-y-8 py-8">
+        <div className="flex flex-col space-y-12 py-8">
           {navItems.map((item) => (
             <Link 
               key={item.path} 
               to={item.path} 
               className={cn(
-                "flex flex-col items-center justify-center p-3 rounded-lg transition-all w-12 h-12 nav-item hover-glow relative group",
+                "flex flex-col items-center justify-center p-3 rounded-xl transition-all w-12 h-12 nav-item hover-glow relative group",
                 activeRoute === item.path 
-                  ? "text-primary bg-primary/10 shadow-soft" 
-                  : "text-gray-500 hover:text-primary"
+                  ? "text-white bg-gradient-primary shadow-glow" 
+                  : "text-primary hover:text-primary-light"
               )}
             >
-              <item.icon className="w-5 h-5" />
-              <span className="absolute left-16 bg-primary text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+              <item.icon className={cn(
+                "w-6 h-6 transition-all",
+                activeRoute === item.path ? "animate-pulse-soft" : "group-hover:scale-110"
+              )} />
+              <span className="absolute left-16 bg-gradient-primary text-white px-3 py-1.5 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md">
                 {item.name}
               </span>
             </Link>
